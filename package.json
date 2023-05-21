@@ -1,5 +1,5 @@
 {
-  "name": "@jmyeongjun/react-native-typescript-boilerplate",
+  "name": "react-native-ts-boilerplate",
   "version": "0.0.1",
   "scripts": {
     "android": "react-native run-android",
@@ -7,6 +7,10 @@
     "lint": "eslint .",
     "start": "react-native start --reset-cache",
     "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmyeongjun/react-native-ts-boilerplate"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.4",
