@@ -1,4 +1,5 @@
 # react-native-typescript-boilerplate
+This is react-native boilerplate with typescript
 
-# rename
-use npx react-native-rename <project-name> -b <bundleId>
+# how to rename
+npx react-native-rename \<project-name\> -b \<bundleId\>
