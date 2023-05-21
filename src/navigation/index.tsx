@@ -9,10 +9,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { palette } from '@theme/themes';
 // ? Screens
 import HomeScreen from '@screens/home';
-import SearchScreen from '@screens/tab1';
-import DetailScreen from '@screens/tab2';
-import ProfileScreen from '@screens/tab3';
-import NotificationScreen from '@screens/detail';
+import Tab1Screen from '@screens/tab1';
+import Tab2Screen from '@screens/tab2';
+import Tab3Screen from '@screens/tab3';
+import DetailScreen from '@screens/detail';
 import { SCREENS } from '@shared-constants';
 
 // ? If you want to use stack or tab or both
@@ -30,12 +30,9 @@ const Navigation = () => {
             headerTitle: '',
             headerRight: headerBtn,
             headerLeft: headerBtn,
-            // headerTransparent: true,
           }}
         />
-        <Stack.Screen name={SCREENS.DETAIL}>
-          {(props) => <DetailScreen {...props} />}
-        </Stack.Screen>
+        <Stack.Screen name={SCREENS.DETAIL} component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -81,12 +78,11 @@ const RenderTabNavigation = () => {
         tabBarStyle: {
           backgroundColor: palette.white,
         },
-        // tabBarShowLabel: false,
       })}>
       <Tab.Screen name={SCREENS.HOME} component={HomeScreen} />
-      <Tab.Screen name={SCREENS.TAB1} component={SearchScreen} />
-      <Tab.Screen name={SCREENS.TAB2} component={NotificationScreen} />
-      <Tab.Screen name={SCREENS.TAB3} component={ProfileScreen} />
+      <Tab.Screen name={SCREENS.TAB1} component={Tab1Screen} />
+      <Tab.Screen name={SCREENS.TAB2} component={Tab2Screen} />
+      <Tab.Screen name={SCREENS.TAB3} component={Tab3Screen} />
     </Tab.Navigator>
   );
 };

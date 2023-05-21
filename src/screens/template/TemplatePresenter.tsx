@@ -5,12 +5,14 @@ import React from 'react';
  */
 import * as s from './TemplateStyle';
 
-interface TemplateProps {}
+interface TemplateProps {
+  text: string;
+}
 
 const TemplatePresenter: React.FC<TemplateProps> = (props) => {
   return (
     <s.Container>
-      <s.Text>Template</s.Text>
+      <s.Text>{props.text}</s.Text>
     </s.Container>
   );
 };
