@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text } from 'react-native';
+import { Pressable, Text } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -29,7 +29,6 @@ const Navigation = () => {
           options={{
             headerTitle: '',
             headerRight: headerBtn,
-            headerLeft: headerBtn,
           }}
         />
         <Stack.Screen name={SCREENS.DETAIL} component={DetailScreen} />
@@ -89,11 +88,15 @@ const RenderTabNavigation = () => {
 
 const headerBtn = () => {
   return (
-    <Button
-      onPress={() => console.log('btn clicked!!')}
-      title="Info"
-      color="#12f"
-    />
+    <Pressable
+      onPress={() => console.log('header button pressed!')}
+      style={{
+        backgroundColor: '#7daaff',
+        padding: 10,
+        marginRight: 10,
+      }}>
+      <Text style={{ fontWeight: 'bold' }}>Btn</Text>
+    </Pressable>
   );
 };
 
