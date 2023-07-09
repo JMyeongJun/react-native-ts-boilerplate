@@ -14,6 +14,7 @@ import Tab2Screen from '@screens/tab2';
 import Tab3Screen from '@screens/tab3';
 import DetailScreen from '@screens/detail';
 import { SCREENS } from '@shared-constants';
+import Icon from 'assets/icons';
 
 // ? If you want to use stack or tab or both
 const Tab = createBottomTabNavigator();
@@ -91,11 +92,9 @@ const headerBtn = () => {
     <Pressable
       onPress={() => console.log('header button pressed!')}
       style={{
-        backgroundColor: '#7daaff',
-        padding: 10,
-        marginRight: 10,
+        padding: 5,
       }}>
-      <Text style={{ fontWeight: 'bold' }}>Btn</Text>
+      <Icon.Bell size={30} />
     </Pressable>
   );
 };
