@@ -5,7 +5,7 @@
 
 # react-native-typescript-boilerplate
 This is React-Native boilerplate with Typescript
-- New React Native Architecture Ready (RN 0.71+) 🍻
+- New React Native Architecture Ready (RN 0.72+) 🍻
 - Latest `React` and `React Native` Dependencies 🌟
 
 # 🚀 Getting Started
