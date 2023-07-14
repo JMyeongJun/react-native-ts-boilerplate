@@ -1,17 +1,20 @@
 import React from 'react';
 import { SvgProps } from 'react-native-svg';
 
-import AddCircle from './add-circle-svgrepo-com.svg';
-import Layers from './layers-svgrepo-com.svg';
-import Lock from './lock-keyhole-svgrepo-com.svg';
-import Unlock from './lock-keyhole-unlocked-svgrepo-com.svg';
-import Menu from './menu-dots-svgrepo-com.svg';
-import MinusCircle from './minus-circle-svgrepo-com.svg';
-import Bell from './bell-svgrepo-com.svg';
+import AddCircle from './add-circle.svg';
+import Layers from './layers.svg';
+import Lock from './lock.svg';
+import Unlock from './lock-unlocked.svg';
+import Menu from './menu-dots.svg';
+import MinusCircle from './minus-circle.svg';
+import Bell from './bell.svg';
+import Cart from './cart.svg';
+import Clipboard from './clipboard.svg';
+import Home from './home.svg';
+import Pallete from './pallete.svg';
 
 /**
  *  free svg icons from https://www.svgrepo.com/
- *  used collection : solar-linear-icons
  */
 
 interface IconProps extends SvgProps {
@@ -26,6 +29,10 @@ const Icon = {
   Menu: (props: IconProps) => createIcon(props, Menu),
   MinusCircle: (props: IconProps) => createIcon(props, MinusCircle),
   Bell: (props: IconProps) => createIcon(props, Bell),
+  Cart: (props: IconProps) => createIcon(props, Cart),
+  Clipboard: (props: IconProps) => createIcon(props, Clipboard),
+  Home: (props: IconProps) => createIcon(props, Home),
+  Pallete: (props: IconProps) => createIcon(props, Pallete),
 };
 
 const createIcon: React.FC = (props: IconProps, Svg: React.FC<SvgProps>) => {

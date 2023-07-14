@@ -43,25 +43,27 @@ const renderTabIcon = (
   color: string,
   size: number,
 ) => {
-  let iconName = 'home';
+  let TabIcon;
+
   switch (route.name) {
     case SCREENS.HOME:
-      iconName = focused ? 'home' : 'home-out';
+      TabIcon = Icon.Home;
       break;
     case SCREENS.TAB1:
-      iconName = focused ? 'search' : 'search-out';
+      TabIcon = Icon.Cart;
       break;
     case SCREENS.TAB2:
-      iconName = focused ? 'noti' : 'noti-out';
+      TabIcon = Icon.Clipboard;
       break;
     case SCREENS.TAB3:
-      iconName = focused ? 'person' : 'person-out';
+      TabIcon = Icon.Layers;
       break;
     default:
-      iconName = focused ? 'home' : 'home-out';
+      TabIcon = Icon.Home;
       break;
   }
-  return <Text>{iconName}</Text>;
+
+  return TabIcon({ size: 30, color: color });
 };
 
 const RenderTabNavigation = () => {
