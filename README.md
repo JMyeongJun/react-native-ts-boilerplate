@@ -31,7 +31,7 @@ There is a good example by default on `HomeScreen`. You can delete the all scree
 - `cd ios && pod install` (iOS Only)
 - `react-native run-ios/android`
 
-## Rename the project: (Thanks to [react-native-name](https://github.com/junedomingo/react-native-rename))
+## Rename the project: (Thanks to [react-native-rename](https://github.com/junedomingo/react-native-rename))
 
 ```sh
 npx react-native-rename <your-project-name>
