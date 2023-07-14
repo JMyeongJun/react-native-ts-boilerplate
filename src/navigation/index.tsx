@@ -28,8 +28,7 @@ const Navigation = () => {
           name={'Main'}
           component={RenderTabNavigation}
           options={{
-            headerTitle: '',
-            headerRight: headerBtn,
+            headerShown: false,
           }}
         />
         <Stack.Screen name={SCREENS.DETAIL} component={DetailScreen} />
@@ -69,7 +68,7 @@ const RenderTabNavigation = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        headerShown: false,
+        headerRight: headerBtn,
         tabBarIcon: ({ focused, color, size }) => {
           return renderTabIcon(route, focused, color, size);
         },
@@ -92,9 +91,9 @@ const headerBtn = () => {
     <Pressable
       onPress={() => console.log('header button pressed!')}
       style={{
-        padding: 5,
+        paddingRight: 10,
       }}>
-      <Icon.Bell size={30} />
+      <Icon.Bell />
     </Pressable>
   );
 };
